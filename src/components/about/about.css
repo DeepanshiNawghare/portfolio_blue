@@ -1,0 +1,110 @@
+.about_sec  {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+.about_me{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background-image: linear-gradient(45deg, transparent, #4db5ff, transparent);
+    display: grid;
+    place-items: center;
+}
+.about_me_img{
+    border-radius: 2rem;
+   transform: rotate(10deg);
+   overflow: hidden;
+   transition: all 400ms ease;
+}
+.about_me_img:hover{
+   transform: rotate(0deg);   
+}
+.about_card{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+.about_card-cnt{
+    background-color: #2c2c6c;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+    transition: all 400ms ease; 
+}
+.about_card-cnt:hover{
+    border-color: rgba(77, 181, 255, 0.4);
+    background-color: transparent;
+    cursor: default;
+}
+.about_icon{
+color: #4db5ff;
+font-size: 1.4rem;
+margin-bottom: 1rem;
+}
+.about_card-cnt h5{
+    font-size: 0.95rem;
+}
+.about_card-cnt small{
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.6);
+}
+.about_txt p{
+    margin: 2rem 0 2.6rem;
+    color:  rgba(255,255,255,0.6);
+} 
+.about_txt a {
+    padding: 0.75rem 1.2rem;
+    color: #2c2c6c;
+    background-color: #4db5ff;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    width: max-content;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+.about_txt a:hover {
+    background-color: white;
+    color: #2c2c6c;
+}
+/* MEADIA QUERIES  for small device*/
+@media screen and (max-width:767px) {
+    
+    .about_sec{
+        grid-template-columns: 1fr ;
+        gap: 0;
+       }
+    .about_sec{
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+    .about_card{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+    .about_txt{
+        text-align: center;
+    }
+    .about_txt p{
+        margin: 1.5rem 0;
+    }
+}
+/* MEADIA QUERIES  for medium device*/
+@media screen and (min-width:768px) and (max-width:992px) {
+    
+    .about_sec{
+        grid-template-columns: 1fr ;
+        gap: 0;
+       }
+       .about_me{
+        width: 50%;
+        margin: 2rem auto 4rem;
+    
+       }
+       .about_cnt p{
+        margin: 1rem 0 1.5rem;
+       }
+}
